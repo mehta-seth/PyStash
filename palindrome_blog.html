@@ -63,34 +63,22 @@
                                     <p><span class="drop_caps">P</span>alindrome number is a number that remains unchanged when the digits are reversed.</p>
                                 </div>
                                 <p>Example: 121 is palindrome number as the reverse of 121 remains unchanged </p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="image-one">
-                                            <img src="img/blog-image1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="image-two">
-                                            <img src="img/blog-image2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
                                 <p><h3>Code:</h3>
-                                  <code>
-                                    def reverse(n):
-                                        s=0
-                                        while n>0:
-                                          s=(s*10)+(n%10)
-                                          n=int(n/10)
-                                        return s
-                                    def check(n):
-                                        if n== reverse(n):
-                                          print(n," is a Palindrome Number")
-                                        else:
-                                        print(n,"  is a not Palindrome Number")
-                                    n=int(input("ENTER A NUMBER TO CHECK WHETHER IT IS PALINDROME OR NOT"))
-                                    check(n)
-                                  </code>
+                                  <pre><code>
+def reverse(n):
+    s=0
+    while n>0:
+      s=(s*10)+(n%10)
+      n=int(n/10)
+    return s
+def check(n):
+    if n== reverse(n):
+      print(n," is a Palindrome Number")
+    else:
+    print(n,"  is a not Palindrome Number")
+n=int(input("ENTER A NUMBER TO CHECK WHETHER IT IS PALINDROME OR NOT"))
+check(n)
+                                  </code></pre>
                                 <p><h3>Output:</h3>
                                 <p>ENTER A NUMBER TO CHECK WHETHER IT IS PALINDROME OR NOT 121
                                 <p> 121 is a Palindrome Number
@@ -163,7 +151,7 @@
                                 </ul>
 
                             </div>
-                            <form action="#" method="get" netlify>
+                            <form action="#" name = "form1" method="get" netlify>
                                 <div class="name">
                                     <input type="text" name="" id="" placeholder="Name" class="name">
                                 </div>
@@ -232,7 +220,7 @@
                         </div>
                         <div class="newsletter">
                             <h2 class="sidebar-title">Subscribe To oUR nEWSLETTER</h2>
-                            <form action="#" method="post" netlify>
+                            <form action="#" method="post" name = "form2" netlify>
                                 <input type="email" name="" id="" placeholder="Email">
                                 <input type="submit" value="Subscribe">
                             </form>
