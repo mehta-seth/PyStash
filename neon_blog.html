@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Introduction</title>
+    <title>Neon</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <style>
+    code {
+      font-family: Consolas,"courier new";
+      color: white;
+      background-color: #000000;
+      padding: 2px;
+      font-size: 105%;
+         }
+    </style>
 </head>
 
 <body>
@@ -29,8 +38,8 @@
                   <div class="col-md-10">
                       <div class="menu">
                           <ul>
-                              <li class="active"><a href="index.html">Home</a></li>
-                              <li><a href="programs.html">programs</a></li>
+                              <li><a href="index.html">Home</a></li>
+                              <li class="active"><a href="programs.html">programs</a></li>
                               <li><a href="#">data science</a></li>
                               <li><a href="#">tableau</a></li>
                               <li><a href="#">about us</a></li>
@@ -49,28 +58,32 @@
                         <div class="col-md-8">
                         <div class="blog-area">
                             <div class="blog-area-part">
-                                <h2>Introduction</h2>
+                                <h2>Neon Number</h2>
                                 <div class="for-style">
-                                    <p><span class="drop_caps">Hello World!</span></p>
+                                    <p><span class="drop_caps">A</span> number is said to be a Neon Number if the sum of digits of the square of the number is equal to the number itself.</p>
                                 </div>
-                                <img src="img/single-bg.jpg" alt="">
-                                <p>Agh! You guys probably must have understood what this page is going to be all about. We assure you that this page will bring delight to you as this page is not only going to be informative but also fun. Unknown facts will be unleashed to you everytime you refresh this page. So, grab a cup of strong coffee and get ready to enter the world of data science and programming with us.</p>
-                                <h3><i class="fa fa-quote-left" aria-hidden="true"></i>Programs must be written for people to read, and only incidentally for machines to execute.<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="image-one">
-                                            <img src="img/blog-image1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="image-two">
-                                            <img src="img/blog-image2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <p>Discovering the truths and patterns from data is the job of a data scientist and bringing them to you is our responsibility. Our page is welcoming to all doubts and ideas and we would love to collaborate with you. Just drop a Hi and we would love to join you over coffee for some cool projects <3 .</p>
-                                </div>
-                            <form action="#" method="get">
+                                <p>For Example '9' is a Neon Number. As 9*9=81 and 8+1=9</p>
+                                <p><h3>Code:</h3>
+                                  <pre><code>
+def sum_of_digits(n):
+    if n<=9:
+        return n
+    return int(n%10)+sum_of_digits(int(n/10))
+
+def check(n):
+    if sum_of_digits(n*n)==n:
+        print(n, " is a Neon Number")
+    else:
+        print(n, " is not a Neon Number")
+n=int(input("ENTER A NUMBER TO CHECK WHETHER IT IS NEON NUMBER OR NOT"))
+check(n)
+                                  </code></pre>
+                                <p><h3>Output:</h3>
+                                <p>ENTER A NUMBER TO CHECK WHETHER IT IS NEON NUMBER OR NOT 9
+                                <p>9 is a Neon Number
+                            </div>
+
+                            <form action="#" name = "form1" method="get">
                                 <div class="name">
                                     <input type="text" name="" id="" placeholder="Name" class="name">
                                 </div>
@@ -139,7 +152,7 @@
                         </div>
                         <div class="newsletter">
                             <h2 class="sidebar-title">Subscribe To oUR nEWSLETTER</h2>
-                            <form action="#" method="post">
+                            <form action="#" method="post" name = "form2">
                                 <input type="email" name="" id="" placeholder="Email">
                                 <input type="submit" value="Subscribe">
                             </form>
